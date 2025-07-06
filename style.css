@@ -83,6 +83,11 @@ input[type="submit"]:hover {
   color: red;
 }
 
+.task-text {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
 .hidden {
   display: none;
 }
@@ -96,6 +101,7 @@ input[type="submit"]:hover {
   color: green;
   font-weight: bold;
 }
+
 #success-message {
   display: none;
   margin-top: 10px;
