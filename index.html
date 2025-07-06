@@ -12,17 +12,54 @@
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+
+      <label for="priority">Priority:</label>
+      <select id="priority" name="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
       <input type="submit" value="Create New Task">
     </form>
 
-    <div id="list">
-      <h2>My Todos:</h2>
-      <ul id="tasks">
-      </ul>
+    <div id="error-message" class="hidden">
+      <p class="error-text">Please enter a task description.</p>
+    </div>
+    <div id="success-message" class="hidden">
+      <p class="success-text">Task added successfully!</p>
     </div>
 
-    <script src="./src/index.js"></script>
+    <div id="filter">
+      <h2>Filter Tasks:</h2>
+      <label for="filter-priority">Priority:</label>
+      <select id="filter-priority">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="filter-button">Filter</button>
+      <button id="clear-filter-button">Clear Filter</button>
+    </div>
+
+    <div id="sort">
+      <h2>Sort Tasks:</h2>
+      <button id="sort-asc">Sort Ascending</button>
+      <button id="sort-desc">Sort Descending</button>
+      <button id="sort-priority">Sort by Priority</button>
+    </div>
+
+    <div id="task-count">
+      <h2>Task Count:</h2>
+      <p id="count">0</p>
+    </div>
+
+    <ul id="tasks">
+      <!-- Tasks will be added here -->
+    </ul>
   </div>
 
+  <script src="./src/index.js"></script>
 </body>
 </html>
